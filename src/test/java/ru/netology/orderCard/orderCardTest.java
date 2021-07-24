@@ -78,12 +78,8 @@ public class orderCardTest {
         driver.findElement( By.cssSelector( "[data-test-id=phone] .input__control" ) ).sendKeys( "+9653560606" );
         driver.findElement( By.cssSelector( ".checkbox__box" ) ).click();
         driver.findElement( By.cssSelector( "button" ) ).click();
-        String
-                expected =
-                "Поле обязательно для заполнения";
-        String
-                actual =
-                driver.findElement( By.cssSelector( ".input_invalid .input__sub" ) ).getText().trim();
+        String expected = "Поле обязательно для заполнения";
+        String actual = driver.findElement( By.cssSelector( ".input_invalid .input__sub" ) ).getText().trim();
         assertEquals( expected, actual );
     }
 
